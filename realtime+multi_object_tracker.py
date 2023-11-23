@@ -31,7 +31,7 @@ def pytago(width,height):
     return math.floor(math.sqrt(width * width + height * height))
 
 
-
+#video link: https://drive.google.com/file/d/16PClrGCJGV-aSrjevYHA_htyzg2QC49x/view?usp=sharing
 cap = cv2.VideoCapture('Germany_480p.mp4')  #from video
 # cap = cv2.VideoCapture(0)  #from camera
 model1 = YOLO('Yolov8n.pt') #load detection model
