@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Processing</title>
+</head>
+<body>
+    <h1>Video Processing</h1>
+
+    {% if video_path %}
+        <p>Video processed successfully. <a href="{{ video_path }}" target="_blank">Download processed video</a></p>
+    {% endif %}
+
+    <h2>Upload Video</h2>
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <label for="file">Choose a video file:</label>
+        <input type="file" id="file" name="file" accept=".mp4, .avi, .mkv" required>
+        <button type="submit">Upload and Process</button>
+    </form>
+
+    <h2>Get YouTube Video</h2>
+    <form method="post" action="/youtube">
+        <label for="video_url">Enter YouTube Video URL:</label>
+        <input type="text" id="video_url" name="video_url" required>
+        <button type="submit">Get and Process</button>
+    </form>
+</body>
+</html>
